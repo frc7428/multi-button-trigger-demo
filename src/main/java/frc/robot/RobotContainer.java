@@ -59,6 +59,7 @@ public class RobotContainer {
     // If we want to raise while the elevator button is pressed and the reverse button is NOT pressed.
     // The .and() lets us use both buttons.
     // The .negate(), basically, says we want to check when the button ISN'T pressed.
+    // And we do need both - one pressed and one not pressed - to be checked. We can't leave out the reverse button here. Why?
     elevatorButton.and(reverseButton.negate()).whileActiveContinuous(mRaise).whenInactive(mStop);
 
     // In the case of lowering, we want the elevatorButton to be pressed and the reverse button to be pressed.
